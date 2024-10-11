@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission - KCS International School</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .admission-form-container {
+            max-width: 600px;
+            margin: 300px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .admission-form-container h2 {
+            font-family: 'Playfair Display', serif;
+            color: #003366;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .form-control {
+            border-radius: 25px;
+        }
+        .btn-submit {
+            background-color: #ffc107;
+            border-color: #ffc107;
+            color: #003366;
+            border-radius: 25px;
+            font-weight: 500;
+            width: 100%;
+        }
+        .btn-submit:hover {
+            background-color: #e0a800;
+            border-color: #e0a800;
+        }
+        .bank-info {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .bank-info h4 {
+            color: #003366;
+            margin-bottom: 15px;
+        }
+        .bank-info p {
+            font-size: 1.1rem;
+            color: #333;
+        }
+        .barcode {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .barcode img {
+            width: 150px;
+        }
+        
+        
+        /* Pour les écrans de bureau et tablettes 
+       .admission-form-container {
+           margin: 300px auto;
+        }*/
+
+        /* Pour les téléphones */
+        @media (max-width: 768px) {
+          .admission-form-container {
+              margin: 0px auto;
+    }
+}
+    </style>
+</head>
+<body>
+
+    <!-- Admission Form Section -->
+    <div class="admission-form-container">
+        <h2>Admission Form</h2>
+        <form action="Admission9a.php" method="post">
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" class="form-control" id="fullName" name="fullName" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" class="form-control" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" class="form-control" id="dob" name="dob" required>
+            </div>
+            <div class="form-group">
+                <label for="program">Select Program</label>
+                <select class="form-control" id="program" name="program" required>
+                    <option value="Kindergardan">Kindergardan</option>
+                    <option value="Elementary">Elementary</option>
+                    <option value="Middle School">Middle school</option>
+                    <option value="High school">High school</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-submit">Submit Application</button>
+        </form>
+
+        <!-- Bank Information -->
+        <div class="bank-info">
+            <h4>Bank Information for Payment</h4>
+            <p>Bank: ABC Bank</p>
+            <p>Account Number: 123456789</p>
+            <p>IBAN: ABCD1234EFGH5678</p>
+        </div>
+
+        <!-- Barcode -->
+        <div class="barcode">
+            <svg id="barcode"></svg>
+        
+            <p>Scan this code for quicker processing</p>
+        </div>
+    </div>
+
+    <!-- Script Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
+</body>
+</html>

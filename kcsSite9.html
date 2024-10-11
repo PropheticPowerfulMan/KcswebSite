@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KCS - International School</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    
+    
+    
+    
+    <!-- ..............  FRENCH ...............
+    
+    Créé par Lokala - Lomboto Jonathan, également connu sous le pseudonyme "Powerful Teacher".
+
+    Ce site est le fruit d'une passion profonde pour la création de solutions élégantes et fonctionnelles, alliant design moderne et fonctionnalité optimale. En tant que développeur dédié et innovant, j'ai veillé à ce que chaque aspect de ce site reflète un engagement envers l'excellence et une attention méticuleuse aux détails.
+
+    La conception de ce site a été guidée par une vision claire : offrir une interface utilisateur intuitive et un système d'inscription performant pour l'école KCS International. Mon objectif est de faciliter l'admission des élèves tout en intégrant des éléments visuels raffinés et des fonctionnalités pratiques.
+
+    En combinant des compétences techniques avancées avec une compréhension approfondie des besoins utilisateurs, ce projet témoigne d'une volonté de créer des outils qui répondent aux exigences modernes de manière élégante et efficace.
+
+    Merci pour votre visite et j'espère que vous apprécierez l'expérience offerte par ce site autant que j'ai aimé le créer.
+
+    - Lokala - Lomboto Jonathan (Powerful Teacher)
+    -->
+    
+    
+    
+    
+    <!-- ..............ENGLISH..................
+    
+    Created by Lokala - Lomboto Jonathan, also known by the nickname "Powerful Teacher".
+
+    This site is the result of a deep passion for creating elegant and functional solutions, combining modern design with optimal functionality. As a dedicated and innovative developer, I have ensured that every aspect of this site reflects a commitment to excellence and meticulous attention to detail.
+
+    The design of this site has been guided by a clear vision: to provide an intuitive user interface and an effective registration system for KCS International School. My goal is to facilitate student admissions while incorporating refined visual elements and practical features.
+
+    By combining advanced technical skills with a deep understanding of user needs, this project demonstrates a commitment to creating tools that meet modern requirements in an elegant and effective manner.
+
+    Thank you for visiting, and I hope you enjoy the experience offered by this site as much as I enjoyed creating it.
+
+    - Lokala - Lomboto Jonathan (Powerful Teacher)
+    
+    
+   -->
+    
+    
+    
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .navbar {
+            background-color: #003366;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+        .navbar:hover {
+            background-color: #002244;
+        }
+        .navbar-brand {
+            color: #fff;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+        .navbar-brand img {
+            width: 230px;
+            height: auto;
+            margin-right: 10px;
+        }
+        .navbar-nav .nav-link {
+            color: #fff;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #ffc107;
+        }
+        .hero {
+            position: relative;
+            height: 500px;
+            width:100% ;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+            background-image: url("4.jpeg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+       }
+
+        .hero .slider {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 300%;
+            height: 100%;
+            display: flex;
+            animation: slide 30s infinite alternate; /* Durée augmentée et alternance pour aller-retour */
+        }
+
+
+        @keyframes slide {
+            0%, 16.66% { 
+            transform: translateX(0); 
+            }
+            33.33%, 50% { 
+            transform: translateX(-100%); 
+            }
+            66.66%, 83.33% { 
+            transform: translateX(-200%); 
+            }
+            100% { 
+            transform: translateX(-100%); /* Retour à la position centrale pour l'effet de va-et-vient */          }
+        }
+
+       .hero .slide {
+           flex: 1 0 30%;
+           background-size: cover;
+           background-position: center;
+       }
+       
+       
+       .hero .slide:last-child {
+            background-image: url('6.jpeg'); /* Remplacez par le chemin de votre image */
+}
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            margin-bottom: 0;
+            opacity: 0;
+            animation: fadeInUp 1.5s forwards;
+        }
+        .hero p {
+            font-size: 1.8rem;
+            margin-top: 10px;
+            opacity: 0;
+            animation: fadeInUp 2s forwards;
+            animation-delay: 0.5s;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .section-title {
+            margin: 2rem 0;
+            text-align: center;
+            color: #003366;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 2.5rem;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+            animation-delay: 0.5s;
+        }
+        footer {
+            background-color: #003366;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+        }
+        footer a {
+            color: #ffc107;
+            margin: 0 1rem;
+            transition: color 0.3s ease;
+        }
+        footer a:hover {
+            color: #fff;
+        }
+        .social-icons a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: #ffc107;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+        .img-fluid.full-width {
+            width: 100%;
+        }
+        .btn-primary {
+            background-color: #ffc107;
+            border-color: #ffc107;
+            color: #003366;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+            border-radius: 25px;
+        }
+        .btn-primary:hover {
+            background-color: #e0a800;
+            border-color: #e0a800;
+        }
+        form .form-group {
+            margin-bottom: 1.5rem;
+        }
+        form .form-control {
+            border-radius: 25px;
+        }
+        .form-control::placeholder {
+            color: #888;
+        }
+        .form-group input, .form-group textarea {
+            border-radius: 25px;
+        }
+        .section {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 2s forwards;
+        }
+        .section:nth-of-type(even) {
+            animation-delay: 0.5s;
+        }
+        .section:nth-of-type(odd) {
+            animation-delay: 1s;
+        }
+        /* Section "Educational Programs" layout */
+        .education-programs {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+        }
+        
+        @media (max-width: 768px) {
+            .education-programs {
+                flex-wrap: wrap;
+       }
+       .education-programs .program {
+            flex: 0 0 100%;
+            margin-bottom: 15px;
+          }
+       }
+        .education-programs .program {
+            flex: 1;
+            margin: 15px;
+            text-align: center;
+        }
+        
+                /* Animation d'apparition progressive */
+       .section-hidden {
+            opacity: 0;
+            transform: translateY(20px);
+             transition: opacity 1s ease-out, transform 1s ease-out;
+       }
+
+       .section-visible {
+            opacity: 1;
+            transform: translateY(0);
+       }
+       
+       
+  
+        /* Ajoutez ces styles à votre CSS */
+       .img-fluid {
+            transition: all 0.3s ease;
+            filter: grayscale(50%) brightness(90%) contrast(120%) blur(1px);
+        }
+    
+       .img-fluid:hover {
+            filter: none;
+            transform: scale(1.05);
+       }
+       
+       
+        .img-fluid full-width my-3{
+             transition: all 0.3s ease;
+             filter: grayscale(50%) brightness(90%) contrast(120%) blur(1px);
+       }
+
+       .img-fluid full-width my-3:hover {
+            filter: none;
+            transform: scale(1.05);
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">
+            <img src="logo.png" alt="Logo"> <!-- Replace with your logo URL -->
+            
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="Admission9.html">Admission</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Programs</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
+                 <li class="nav-item"><a class="nav-link" href="Developers.html">Developers</a></li>
+               
+               
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+   <div class="hero">
+    <div class="slider">
+        <div class="slide" style="background-image: url('5.jpeg');"></div>
+        <div class="slide" style="background-image: url('2.jpeg');"></div>
+        <div class="slide" style="background-image: url('3.jpeg');"></div>
+        
+    </div>
+    <div>
+        <h1>Welcome to KCS</h1>
+        <p>Empowering Future Leaders Through Quality Education</p>
+    </div>
+</div>>
+
+    <!-- About Section -->
+    <div class="container mt-5 section">
+        <h2 class="section-title">About Us</h2>
+        <p>KCS International School offers a transformative educational experience where students are encouraged to achieve their highest potential. We are committed to nurturing a multicultural environment that promotes academic excellence and personal growth. Our mission is to develop well-rounded global citizens who are equipped to tackle the challenges of tomorrow.</p>
+        <img src="6.jpeg" class="img-fluid full-width my-3" alt="Dynamic classroom">
+    </div>
+
+    <!-- Programs Section -->
+    <div class="container mt-5 section">
+        <h2 class="section-title">Educational Programs</h2>
+        <p>At KCS, we offer a comprehensive range of programs designed to meet the academic and developmental needs of students at every stage of their educational journey. From early childhood education to advanced secondary studies, our programs foster curiosity, creativity, and critical thinking.</p>
+        <div class="education-programs">
+            <div class="program">
+                <img src="5.jpeg" class="img-fluid" alt="">
+                <h4 class="mt-2">Kindergarden</h4>
+                <p>Our kindergarten program provides a nurturing and Early childhood education that sparks curiosity and joy in learning.</p>
+            </div>
+            <div class="program">
+                <img src="6.jpeg" class="img-fluid" alt="">
+                <h4 class="mt-2">Elementary</h4>
+                <p>Building a solid foundation with a focus on core academic skills.</p>
+            </div>
+            <div class="program">
+                <img src="2.jpeg" class="img-fluid" alt="">
+                <h4 class="mt-2">Middle school</h4>
+                <p>Preparing students for higher education and future careers.</p>
+            </div>
+            <div class="program">
+                <img src="3.jpeg" class="img-fluid" alt="">
+                <h4 class="mt-2">High school</h4>
+                <p>Enhancing personal growth through sports, arts, and leadership opportunities.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="container mt-5 section">
+        <h2 class="section-title">Contact Us</h2>
+        <p>If you have any questions or need further information, please reach out to us using the contact form below. We look forward to hearing from you!</p>
+        <form action="ContactUsa.php" method="post" enctype="text/plain">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+           <p>&copy; 2024 KCS - International School. All rights reserved.</p>
+           <div class="social-icons">
+               <a href="#"><i class="fab fa-facebook-f"></i></a>
+               <a href="#"><i class="fab fa-twitter"></i></a>
+               <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="contact-info">
+               <p>Email: <a href="mailto:jonathanlokala9@gmail.com">jonathanlokala9@gmail.com</a></p>
+               <p>WhatsApp: <a href="https://wa.me/243997978101" target="_blank">+243 997978101</a>, <a href="https://wa.me/243816300058" target="_blank">+243 816300058</a></p>
+             </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+       <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        const sections = document.querySelectorAll('.section');
+
+        function checkVisibility() {
+            const triggerPoint = window.innerHeight * 0.9; // Point de déclenchement de l'animation
+
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+
+                if (sectionTop < triggerPoint) {
+                    section.classList.add('section-visible');
+                    section.classList.remove('section-hidden');
+                } else {
+                    section.classList.remove('section-visible');
+                    section.classList.add('section-hidden');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', checkVisibility);
+        checkVisibility(); // Vérification initiale
+      });
+   </script>
+</body>
+</html>
